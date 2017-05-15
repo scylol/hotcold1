@@ -1,19 +1,21 @@
 import React from 'react';
+import './hotColdContainer.css'
 
-export default function hotCold(props){
+export default function HotCold(props){
   const guesses = props.guesses.map((guess,index)=>{
-    return (<li key={index}>{guess}</li>);
+    return (<li classname='guess' key={index}>{guess}</li>);
   });
 
   return (
-
     <main>
-      <section><h2>Message</h2></section>
-      <section>
-        <input type="text"></input>
-        <h3>Guess number {props.guesses[props.guesses.length-1]}</h3>
-      </section>
-      <section><ul>{guesses}</ul></section>
+      <h1>{props.title}</h1>
+      <section className = 'top-section'><h2>Message</h2></section>
+      <form className = 'main-form'>
+        <input type="text" placeholder='Enter your Guess'></input>
+        <button className = 'guess-button'>Guess</button>
+        <p>Guess number <span className='big-number'>{props.guesses[props.guesses.length-1]}</span></p>
+      </form>
+      <section className = 'bottom-section'><ul>{guesses}</ul></section>
     </main>
 
   )
