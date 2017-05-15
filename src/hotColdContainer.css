@@ -12,6 +12,7 @@ body {
 }
 
 h1 {
+    font-size: 42px;
     color:white;
 }
 #root {
@@ -46,22 +47,21 @@ main {
     
 }
 
-.main-form * {
+.main-form {
     width:100%;
     display: flex;
     flex-direction: column;
-    border-radius: 5px;
     align-items: center;
 }
 
 .guess-button {
-    display:flex;
-    align-items: center;
+    width: 100%;
     margin: 25px 0;
     font-size: 25px;
     background: #1F253D;
     border:none;
     color: #95A5A6;
+    border-radius: 5px;
     
 }
 
@@ -72,14 +72,17 @@ main {
     font-size: 25px;
     text-align: center;
     border: none;
+    border-radius: 5px;
 }
 
 .bottom-section ul li {
     display:inline-flex;
     list-style: none;
-    padding: 3px;
-    border: 5px black;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
     color: white;
+    background: #1A4E95;
 }
 
 .bottom-section ul {
@@ -90,8 +93,18 @@ main {
     justify-content: center;
     width: 100%;
     background: #12A7AA;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .big-number {
    color: orange;
+   font-size: 30px;
+   font-weight: bold;
 }
+
+.main-form p {
+    font-size: 25px;
+}
+
