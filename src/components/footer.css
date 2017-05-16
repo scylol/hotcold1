@@ -1,0 +1,29 @@
+
+
+
+.bottom-section ul li {
+    display:inline-flex;
+    list-style: none;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: white;
+    background: #1A4E95;
+}
+
+.bottom-section ul {
+    padding: 0;
+}
+
+.bottom-section {
+    display:flex;
+    justify-content: center;
+    width: 100%;
+    background: #12A7AA;
+    padding-bottom: 15px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+

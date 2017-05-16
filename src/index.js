@@ -6,6 +6,6 @@ import './index.css';
 
 
 ReactDOM.render(
-  <HotCold  />,
+  <HotCold/>,
   document.getElementById('root')
 );

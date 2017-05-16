@@ -1,0 +1,24 @@
+h1 {
+    font-size: 42px;
+    color:white;
+    text-align: center;
+}
+
+
+.wrapper-div {
+    width: 100%;
+}
+.top-section {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: center;
+    background: #CC324B;
+    width:100%;
+    color: white;
+}
+
+
+
+
+
