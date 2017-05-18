@@ -15,7 +15,7 @@ class Header extends React.Component {
     else if (mathOp < 10) {
       message = 'Supa Hot!'
     }
-    else if (mathOp > 10 && mathOp < 20) {
+    else if (mathOp > 10 && mathOp <= 20) {
       message = 'Warm';
     } else if(mathOp > 20) {
       message = 'Cold';

@@ -31,15 +31,24 @@ class HotCold extends Component{
     this.setState(newState);
   }
   checkAnswer(answer) {
-    const fakeState = {...this.state};
-    if(answer === fakeState.correctAnswer) {
-      fakeState.guesses.push(answer);
-      fakeState.won = true;
-      this.setState(fakeState);
+    // const fakeState = {...this.state};
+    if(answer === this.state.correctAnswer) {
+      this.setState({
+        guesses: [...this.state.guesses, answer],
+        won: true
+      })
+      // fakeState.guesses = [...fakeState.guesses, answer]
+      // // fakeState.guesses.push(answer);
+      // fakeState.won = true;
+      // this.setState(fakeState);
     }
     else {
-      fakeState.guesses.push(answer);
-      this.setState(fakeState);
+      // fakeState.guesses = [...fakeState.guesses, answer]
+      // fakeState.guesses.push(answer);
+      this.setState({
+        guesses: [...this.state.guesses, answer]
+      })
+      // this.setState(fakeState);
     }
   }
 
