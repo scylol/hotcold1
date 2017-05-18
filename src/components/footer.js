@@ -2,8 +2,13 @@ import React from 'react';
 
 import './footer.css'
 
-export default function Footer(props) {
+class Footer extends React.Component {
+
+  render() {
     return (
-        <section className = 'bottom-section'><ul>{props.guesses}</ul></section>
+        <section className='bottom-section'><ul>{this.props.guesses.map((guess, index) => <li key={index}>{guess}</li>)}</ul></section>
     )
+  }
+
 }
+export default Footer

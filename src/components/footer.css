@@ -18,12 +18,11 @@
 .bottom-section {
     display:flex;
     justify-content: center;
-    width: 100%;
+    width: 365px;
+    height: 100px;
+    padding: 25px;
     background: #12A7AA;
     padding-bottom: 15px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
-
-
-

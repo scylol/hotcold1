@@ -6,7 +6,7 @@ h1 {
 
 
 .wrapper-div {
-    width: 100%;
+    width: 365px;
 }
 .top-section {
     border-top-left-radius: 5px;
@@ -14,11 +14,7 @@ h1 {
     display: flex;
     justify-content: center;
     background: #CC324B;
-    width:100%;
+    width:365px;
     color: white;
+    font-size: 12px;
 }
-
-
-
-
-
