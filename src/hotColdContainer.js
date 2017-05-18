@@ -7,6 +7,8 @@ import Footer from './components/footer';
 
 import Form from './components/form';
 
+import NewGame from './components/newGameButton';
+
 class HotCold extends Component{
   constructor(props) {
     super(props);
@@ -17,8 +19,17 @@ class HotCold extends Component{
     }
 
     this.checkAnswer = this.checkAnswer.bind(this);
+    this.resetGame = this.resetGame.bind(this);
   }
 
+  resetGame() {
+      const newState = {
+      correctAnswer: Math.floor(Math.random()*(100 - 1) + 1),
+      guesses: [],
+      won: false
+    }
+    this.setState(newState);
+  }
   checkAnswer(answer) {
     const fakeState = {...this.state};
     if(answer === fakeState.correctAnswer) {
@@ -35,6 +46,7 @@ class HotCold extends Component{
   render() {
     return (
     <main>
+      <NewGame resetGame={this.resetGame} />
       <Header guesses={this.state.guesses} won={this.state.won} correctAnswer={this.state.correctAnswer}/>
       <Form  checkAnswer={this.checkAnswer} won={this.state.won} guesses={this.state.guesses}/>
        <Footer  guesses={this.state.guesses}/>
