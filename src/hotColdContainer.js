@@ -1,7 +1,7 @@
-import React, {Component} from 'react';
-import './hotColdContainer.css'
+import React, { Component } from 'react';
+import './hotColdContainer.css';
 
-import Header from  './components/header';
+import Header from './components/header';
 
 import Footer from './components/footer';
 
@@ -9,60 +9,66 @@ import Form from './components/form';
 
 import NewGame from './components/newGameButton';
 
-class HotCold extends Component{
+class HotCold extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      correctAnswer: Math.floor(Math.random()*(100 - 1) + 1),
+      correctAnswer: Math.floor(Math.random() * (100 - 1) + 1),
       guesses: [],
-      won: false
-    }
+      won: false,
+    };
 
     this.checkAnswer = this.checkAnswer.bind(this);
     this.resetGame = this.resetGame.bind(this);
   }
 
   resetGame() {
-      const newState = {
-      correctAnswer: Math.floor(Math.random()*(100 - 1) + 1),
+    const newState = {
+      correctAnswer: Math.floor(Math.random() * (100 - 1) + 1),
       guesses: [],
-      won: false
-    }
+      won: false,
+    };
     this.setState(newState);
   }
   checkAnswer(answer) {
     // const fakeState = {...this.state};
-    if(answer === this.state.correctAnswer) {
+    if (answer === this.state.correctAnswer) {
       this.setState({
         guesses: [...this.state.guesses, answer],
-        won: true
-      })
+        won: true,
+      });
       // fakeState.guesses = [...fakeState.guesses, answer]
       // // fakeState.guesses.push(answer);
       // fakeState.won = true;
       // this.setState(fakeState);
-    }
-    else {
+    } else {
       // fakeState.guesses = [...fakeState.guesses, answer]
       // fakeState.guesses.push(answer);
       this.setState({
-        guesses: [...this.state.guesses, answer]
-      })
+        guesses: [...this.state.guesses, answer],
+      });
       // this.setState(fakeState);
     }
   }
 
   render() {
     return (
-    <main>
-      <NewGame resetGame={this.resetGame} />
-      <Header guesses={this.state.guesses} won={this.state.won} correctAnswer={this.state.correctAnswer}/>
-      <Form  checkAnswer={this.checkAnswer} won={this.state.won} guesses={this.state.guesses}/>
-       <Footer  guesses={this.state.guesses}/>
-    </main>
-  )
+      <main>
+        <NewGame resetGame={this.resetGame} />
+        <Header
+          guesses={this.state.guesses}
+          won={this.state.won}
+          correctAnswer={this.state.correctAnswer}
+        />
+        <Form
+          checkAnswer={this.checkAnswer}
+          won={this.state.won}
+          guesses={this.state.guesses}
+        />
+        <Footer guesses={this.state.guesses} />
+      </main>
+    );
   }
-
 }
 
 export default HotCold;
