@@ -66,7 +66,7 @@ class HotCold extends Component {
           guesses={this.state.guesses}
         />
         <Footer guesses={this.state.guesses} />
-       
+
       </main>
     );
   }
