@@ -9,6 +9,7 @@ class Header extends React.Component {
     const lastGuess = this.props.guesses[this.props.guesses.length - 1];
     const correctAnswer = this.props.correctAnswer;
     const mathOp = Math.abs(lastGuess - correctAnswer);
+    
     if(isWon === true) {
       message = 'You win!';
     }
@@ -22,7 +23,7 @@ class Header extends React.Component {
     }
     return (
       <div className='wrapper-div'>
-        <h1>{'HOT or COLD'}</h1>
+         <h1>{'HOT or COLD'}</h1>
         <section className='top-section'>
           <h2>{message}</h2>
         </section>
@@ -34,3 +35,5 @@ class Header extends React.Component {
 }
 
 export default Header;
+
+
