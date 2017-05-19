@@ -7,7 +7,7 @@ import Footer from './components/footer';
 
 import Form from './components/form';
 
-import NewGame from './components/newGameButton';
+
 
 class HotCold extends Component {
   constructor(props) {
@@ -15,7 +15,7 @@ class HotCold extends Component {
     this.state = {
       correctAnswer: Math.floor(Math.random() * (100 - 1) + 1),
       guesses: [],
-      won: false,
+      won: false
     };
 
     this.checkAnswer = this.checkAnswer.bind(this);
@@ -26,7 +26,7 @@ class HotCold extends Component {
     const newState = {
       correctAnswer: Math.floor(Math.random() * (100 - 1) + 1),
       guesses: [],
-      won: false,
+      won: false
     };
     this.setState(newState);
   }
@@ -35,7 +35,7 @@ class HotCold extends Component {
     if (answer === this.state.correctAnswer) {
       this.setState({
         guesses: [...this.state.guesses, answer],
-        won: true,
+        won: true
       });
       // fakeState.guesses = [...fakeState.guesses, answer]
       // // fakeState.guesses.push(answer);
@@ -45,7 +45,7 @@ class HotCold extends Component {
       // fakeState.guesses = [...fakeState.guesses, answer]
       // fakeState.guesses.push(answer);
       this.setState({
-        guesses: [...this.state.guesses, answer],
+        guesses: [...this.state.guesses, answer]
       });
       // this.setState(fakeState);
     }
@@ -54,7 +54,7 @@ class HotCold extends Component {
   render() {
     return (
       <main>
-        <NewGame resetGame={this.resetGame} />
+        <button className='newgame-button' onClick={this.resetGame}> New Game </button>
         <Header
           guesses={this.state.guesses}
           won={this.state.won}
@@ -66,6 +66,7 @@ class HotCold extends Component {
           guesses={this.state.guesses}
         />
         <Footer guesses={this.state.guesses} />
+       
       </main>
     );
   }
